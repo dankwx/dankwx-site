@@ -1,0 +1,86 @@
+body {
+  line-height: 1.15;
+  font-family: "NotoEmoji-Regular", "ibm_vga", monospace;
+}
+
+.neofetchCard {
+  display: flex;
+  flex-direction: row;
+  height: min-content;
+  padding: 1em;
+  gap: 1em;
+
+  .neofetchCardImage {
+    height: 8em;
+    width: auto;
+    border-style: none;
+    border-radius: 50%;
+  }
+  .neofetchText {
+    .textLink {
+      color: mediumslateblue;
+      &:hover {
+        color: rgb(148, 133, 236);
+      }
+    }
+
+    width: 100%;
+    b {
+      font-weight: normal;
+      text-shadow: 0 0 0.5px currentColor;
+    }
+    .firstLine {
+      font-size: 1em;
+      font-weight: bold;
+      max-width: 1em;
+      b {
+        color: rgb(214, 210, 235);
+      }
+    }
+    .secondLine {
+      font-size: 1em;
+      font-weight: bold;
+      max-width: 1em;
+      .hide {
+        display: none;
+      }
+      b {
+        color: rgb(214, 210, 235);
+      }
+      .textLinkDiscord {
+        color: mediumslateblue;
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+          color: rgb(148, 133, 236);
+        }
+      }
+      .textLinkDiscord:hover + .hide {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.input {
+  background-color: #17101a;
+  color: rgb(214, 210, 235);
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  font-family: "NotoEmoji-Regular", "ibm_vga", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+  caret-color: rgb(194, 126, 187);
+  display: inline-block;
+  resize: auto;
+  cursor: text;
+  animation: blinker 1s linear infinite;
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+}
